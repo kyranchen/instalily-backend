@@ -24,6 +24,12 @@ from typing import Any
 from anthropic import Anthropic
 
 from .context import Session, extract_entities
+from .guardrails import (
+    SAFE_FALLBACK_REPLY,
+    Violation,
+    build_rewrite_nudge,
+    validate_turn,
+)
 from .prompts import build_system_prompt
 from .store import PartStore
 from .tools import TOOL_SCHEMAS, run_tool
@@ -38,6 +44,7 @@ class TurnResult:
     text: str                          # final assistant message text
     tool_calls: list[dict[str, Any]]   # list of {name, input, result} for this turn
     parts_referenced: list[str]        # PS numbers the agent looked up successfully
+    violations: list[Violation] = None  # populated only if guardrails fired
 
 
 def _client() -> Anthropic:
@@ -77,6 +84,8 @@ def run_turn(store: PartStore, session: Session, user_message: str) -> TurnResul
 
     tool_calls: list[dict[str, Any]] = []
     parts_referenced: list[str] = []
+    guardrail_retries = 0
+    MAX_GUARDRAIL_RETRIES = 1
 
     for _ in range(MAX_TOOL_ROUNDS):
         response = client.messages.create(
@@ -92,12 +101,38 @@ def run_turn(store: PartStore, session: Session, user_message: str) -> TurnResul
         session.add_assistant(response.content)
 
         if response.stop_reason != "tool_use":
-            # Final text turn — extract text blocks
-            text_parts = [b.text for b in response.content if getattr(b, "type", None) == "text"]
+            # Final text turn — extract, then validate before returning
+            text_parts = [
+                b.text for b in response.content if getattr(b, "type", None) == "text"
+            ]
+            text = "\n".join(text_parts).strip()
+
+            validation = validate_turn(text, tool_calls)
+            if validation.ok:
+                return TurnResult(
+                    text=text,
+                    tool_calls=tool_calls,
+                    parts_referenced=parts_referenced,
+                    violations=[],
+                )
+
+            if guardrail_retries < MAX_GUARDRAIL_RETRIES:
+                # Inject a corrective user-role nudge and let the agent rewrite
+                guardrail_retries += 1
+                session.history.append(
+                    {
+                        "role": "user",
+                        "content": build_rewrite_nudge(validation.violations),
+                    }
+                )
+                continue
+
+            # Out of retries: don't ship the ungrounded draft, use the safe fallback
             return TurnResult(
-                text="\n".join(text_parts).strip(),
+                text=SAFE_FALLBACK_REPLY,
                 tool_calls=tool_calls,
                 parts_referenced=parts_referenced,
+                violations=validation.violations,
             )
 
         # Run every tool_use block the model emitted this round
