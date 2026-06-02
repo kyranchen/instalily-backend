@@ -1,0 +1,24 @@
+# ICEMAKER W11284458
+PartSelect Number: PS12584610
+Manufacturer Part Number: W11284458
+Appliance Type: Refrigerator
+Brand: Whirlpool
+Fits Brands: Whirlpool
+Price: $105.35
+Installation Difficulty: Very Easy
+
+## Description
+This ice maker is a genuine OEM replacement part designed for use in refrigerators. The outer housing is made of highly durable plastic and measures approximately 13 inches by 5.5 inches. The assembly includes the icemaker unit, water inlet valve, ice mold, ice bin, thermostat, and wire connector. If any one of the parts in the unit fails, you will need to replace the entire assembly. The ice maker freezes water into ice cubes and ejects them into the ice bucket where they can be easily retrieved when needed. Over time the ice maker may become faulty due to normal wear and tear, damage, or a build-up of ice. The signs of a faulty assembly include difficulties making or dispensing ice, loud grinding or scraping noises, and large blocks of ice in the ice mold or tray.
+
+## Symptoms This Part Fixes
+- Ice maker not making ice
+
+## Replaces Part Numbers
+W11088559
+
+## Sample Compatible Models
+WRS321SDHB05, WRS321SDHV05, WRS321SDHW05, WRS321SDHZ05, WRS325SDHB05, WRS325SDHV05, WRS325SDHW05, WRS325SDHZ05, WRS331SDHB03, WRS331SDHW03
+
+## Customer Repair Stories
+- Ice Maker Not Working Remove ice bin Remove 3 screws Disconnect wire harness Remove ice maker Install new ice maker Connect wire harness Install 3 screws Put ice bin back in James from LITHIA, FL Difficulty Level: Very Easy Total Repair Time: Less than 15 mins Tools: Nutdriver 1 person found this instruction helpful. Was this instruction helpful to you? Thank you for voting!
+- Was not making ice like it should would hang up while trying to dump ice Took out 3 screws and unplugged wires and took old one out installed new one. Very easy just keep in mind it takes about 12 hours before it makes ice Rhonda from PRATTVILLE, AL Difficulty Level: Really Easy Total Repair Time: Less than 15 mins Tools: Screw drivers 3 of 4 people found this instruction helpful. Was this instruction helpful to you? Thank you for voting!

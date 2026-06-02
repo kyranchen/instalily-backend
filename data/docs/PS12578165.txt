@@ -1,0 +1,26 @@
+# Dishwasher INLET VALVE W11175771
+PartSelect Number: PS12578165
+Manufacturer Part Number: W11175771
+Appliance Type: Dishwasher
+Brand: Whirlpool
+Fits Brands: Whirlpool, Kenmore, KitchenAid, Maytag
+Price: $54.24
+Installation Difficulty: Really Easy
+
+## Description
+This water inlet valve should be located behind the lower kick plate panel in either the right or left corner. The attaching solenoids on the valve open and close according to the desired amount of water needed.
+
+## Symptoms This Part Fixes
+- Will not fill with water
+- Leaking
+- Not cleaning dishes properly
+- Noisy
+
+## Replaces Part Numbers
+AP6339872, W10195047, W10327250, W10872255, W11130744
+
+## Sample Compatible Models
+2212413N414, 2213092N413, 2213099N413, 2213222N414, 2213223N414, 2213229N414, 2213479N413, 2213809N710, 2214523N611, 2214545N711
+
+## Customer Repair Stories
+- Dishwasher would not fill with water The water valve float lever was broke. So I replaced that and the water level switch. Probably didn’t have to replace switch. Very easy!! Other Parts Used: Dishwasher INLET VALVE Dishwasher Water Inlet Brian from DOYLESTOWN, PA Difficulty Level: Really Easy Total Repair Time: Less than 15 mins 7 of 10 people found this instruction helpful. Was this instruction helpful to you? Thank you for voting!
