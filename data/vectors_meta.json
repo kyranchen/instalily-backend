@@ -1,0 +1,597 @@
+[
+  {
+    "part_number": "PS10065979",
+    "manufacturer_part_number": "W10712395",
+    "name": "Upper Rack Adjuster Kit - White Wheels, Left and Right Sides W10712395",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Door won’t close",
+      "Door latch failure",
+      "Not cleaning dishes properly",
+      "Noisy",
+      "Leaking",
+      "Will Not Start"
+    ],
+    "source_url": "https://www.partselect.com/PS10065979-Whirlpool-W10712395-Upper-Rack-Adjuster-Kit-White-Wheels-Left-and-Right-Sides.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/10065979-1-M-Whirlpool-W10712395-Upper-Rack-Adjuster-Kit-White-Wheels-Left-and-Right-Sides.jpg",
+    "price": "$55.29",
+    "doc_path": "data/docs/PS10065979.txt"
+  },
+  {
+    "part_number": "PS11701542",
+    "manufacturer_part_number": "EDR1RXD1",
+    "name": "Refrigerator Ice and Water Filter EDR1RXD1",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Not dispensing water",
+      "Ice maker not making ice",
+      "Ice maker won’t dispense ice",
+      "Leaking",
+      "Ice maker dispenses too little ice"
+    ],
+    "source_url": "https://www.partselect.com/PS11701542-Whirlpool-EDR1RXD1-Refrigerator-Ice-and-Water-Filter.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11701542-1-M-Whirlpool-EDR1RXD1-Refrigerator-Ice-and-Water-Filter.jpg",
+    "price": "$84.45",
+    "doc_path": "data/docs/PS11701542.txt"
+  },
+  {
+    "part_number": "PS11722130",
+    "manufacturer_part_number": "EDR4RXD1",
+    "name": "Refrigerator Water Filter EDR4RXD1",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Not dispensing water",
+      "Ice maker not making ice",
+      "Leaking",
+      "Ice maker dispenses too little ice",
+      "Noisy",
+      "Fridge too cold",
+      "Ice maker won’t dispense ice",
+      "Touchpad does not respond"
+    ],
+    "source_url": "https://www.partselect.com/PS11722130-Whirlpool-EDR4RXD1-Refrigerator-Water-Filter.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11722130-1-M-Whirlpool-EDR4RXD1-Refrigerator-Water-Filter.jpg",
+    "price": "$84.45",
+    "doc_path": "data/docs/PS11722130.txt"
+  },
+  {
+    "part_number": "PS11730901",
+    "manufacturer_part_number": "W10823511",
+    "name": "Water Tube Kit W10823511",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Leaking",
+      "Ice maker not making ice",
+      "Not dispensing water"
+    ],
+    "source_url": "https://www.partselect.com/PS11730901-Whirlpool-W10823511-Water-Tube-Kit.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11730901-1-M-Whirlpool-W10823511-Water-Tube-Kit.jpg",
+    "price": "$27.36",
+    "doc_path": "data/docs/PS11730901.txt"
+  },
+  {
+    "part_number": "PS11731570",
+    "manufacturer_part_number": "W10861000",
+    "name": "Detergent Dispenser W10861000",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Will not dispense detergent",
+      "Door latch failure",
+      "Not cleaning dishes properly",
+      "Leaking",
+      "Door won’t close"
+    ],
+    "source_url": "https://www.partselect.com/PS11731570-Whirlpool-W10861000-Detergent-Dispenser.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11731570-1-M-Whirlpool-W10861000-Detergent-Dispenser.jpg",
+    "price": "$80.82",
+    "doc_path": "data/docs/PS11731570.txt"
+  },
+  {
+    "part_number": "PS11737961",
+    "manufacturer_part_number": "W10854221",
+    "name": "Electric Control Board W10854221",
+    "appliance_type": "Dishwasher",
+    "symptoms": [],
+    "source_url": "https://www.partselect.com/PS11737961-Whirlpool-W10854221-Electric-Control-Board.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11737961-1-M-Whirlpool-W10854221-Electric-Control-Board.jpg",
+    "price": "$151.50",
+    "doc_path": "data/docs/PS11737961.txt"
+  },
+  {
+    "part_number": "PS11742755",
+    "manufacturer_part_number": "WP489483",
+    "name": "Screw WP489483",
+    "appliance_type": "Dishwasher",
+    "symptoms": [],
+    "source_url": "https://www.partselect.com/PS11742755-Whirlpool-WP489483-Screw.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11742755-1-M-Whirlpool-WP489483-Screw.jpg",
+    "price": "$11.77",
+    "doc_path": "data/docs/PS11742755.txt"
+  },
+  {
+    "part_number": "PS11742758",
+    "manufacturer_part_number": "WP489497",
+    "name": "Refrigerator Screw WP489497",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Door won’t open or close"
+    ],
+    "source_url": "https://www.partselect.com/PS11742758-Whirlpool-WP489497-Refrigerator-Screw.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11742758-1-M-Whirlpool-WP489497-Refrigerator-Screw.jpg",
+    "price": "$11.77",
+    "doc_path": "data/docs/PS11742758.txt"
+  },
+  {
+    "part_number": "PS11743427",
+    "manufacturer_part_number": "WP661600",
+    "name": "Washer 2speed Drive Motor 60hz 120v WP661600",
+    "appliance_type": "Unknown",
+    "symptoms": [
+      "Burning smell",
+      "Will Not Start",
+      "Will not agitate",
+      "Will not drain",
+      "Spinning Issues"
+    ],
+    "source_url": "https://www.partselect.com/PS11743427-Whirlpool-W10503278-Refrigerator-Ice-Maker-Assembly.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11743427-1-M-Whirlpool-WP661600-Washer-2speed-Drive-Motor-60hz-120v.jpg",
+    "price": "$158.79",
+    "doc_path": "data/docs/PS11743427.txt"
+  },
+  {
+    "part_number": "PS11745496",
+    "manufacturer_part_number": "WP8269145",
+    "name": "Dishwasher Mounting Bracket WP8269145",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Door latch failure",
+      "Door won’t close",
+      "Leaking"
+    ],
+    "source_url": "https://www.partselect.com/PS11745496-Whirlpool-WP8269145-Dishwasher-Mounting-Bracket.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11745496-1-M-Whirlpool-WP8269145-Dishwasher-Mounting-Bracket.jpg",
+    "price": "$15.00",
+    "doc_path": "data/docs/PS11745496.txt"
+  },
+  {
+    "part_number": "PS11746591",
+    "manufacturer_part_number": "WP8565925",
+    "name": "Dishwasher Rack Track Stop WP8565925",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Door latch failure",
+      "Door won’t close",
+      "Not cleaning dishes properly",
+      "Noisy"
+    ],
+    "source_url": "https://www.partselect.com/PS11746591-Whirlpool-WP8565925-Dishwasher-Rack-Track-Stop.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11746591-1-M-Whirlpool-WP8565925-Dishwasher-Rack-Track-Stop.jpg",
+    "price": "$9.62",
+    "doc_path": "data/docs/PS11746591.txt"
+  },
+  {
+    "part_number": "PS11750092",
+    "manufacturer_part_number": "WPW10195839",
+    "name": "Dishwasher Dishrack Adjuster WPW10195839",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Door won’t close",
+      "Door latch failure"
+    ],
+    "source_url": "https://www.partselect.com/PS11750092-Whirlpool-WPW10195839-Dishwasher-Dishrack-Adjuster.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11750092-1-M-Whirlpool-WPW10195839-Dishwasher-Dishrack-Adjuster.jpg",
+    "price": "$35.80",
+    "doc_path": "data/docs/PS11750092.txt"
+  },
+  {
+    "part_number": "PS11750093",
+    "manufacturer_part_number": "WPW10195840",
+    "name": "Dishwasher Positioner WPW10195840",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Door won’t close",
+      "Not cleaning dishes properly",
+      "Door latch failure"
+    ],
+    "source_url": "https://www.partselect.com/PS11750093-Whirlpool-WPW10195840-Dishwasher-Positioner.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11750093-1-M-Whirlpool-WPW10195840-Dishwasher-Positioner.jpg",
+    "price": "$48.45",
+    "doc_path": "data/docs/PS11750093.txt"
+  },
+  {
+    "part_number": "PS11752778",
+    "manufacturer_part_number": "WPW10321304",
+    "name": "Refrigerator Door Shelf Bin WPW10321304",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Door won’t open or close",
+      "Ice maker won’t dispense ice",
+      "Leaking"
+    ],
+    "source_url": "https://www.partselect.com/PS11752778-Whirlpool-WPW10321304-Refrigerator-Door-Shelf-Bin.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11752778-1-M-Whirlpool-WPW10321304-Refrigerator-Door-Shelf-Bin.jpg",
+    "price": "$47.40",
+    "doc_path": "data/docs/PS11752778.txt"
+  },
+  {
+    "part_number": "PS11753379",
+    "manufacturer_part_number": "WPW10348269",
+    "name": "Dishwasher Drain Pump WPW10348269",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Not draining",
+      "Leaking",
+      "Noisy",
+      "Not cleaning dishes properly",
+      "Will Not Start"
+    ],
+    "source_url": "https://www.partselect.com/PS11753379-Whirlpool-WPW10348269-Dishwasher-Drain-Pump.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11753379-1-M-Whirlpool-WPW10348269-Dishwasher-Drain-Pump.jpg",
+    "price": "$62.60",
+    "doc_path": "data/docs/PS11753379.txt"
+  },
+  {
+    "part_number": "PS11755592",
+    "manufacturer_part_number": "WPW10491331",
+    "name": "Dishwasher Lower Spray Arm WPW10491331",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Not cleaning dishes properly",
+      "Leaking",
+      "Noisy",
+      "Not drying dishes properly",
+      "Not draining"
+    ],
+    "source_url": "https://www.partselect.com/PS11755592-Whirlpool-WPW10491331-Dishwasher-Lower-Spray-Arm.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11755592-1-M-Whirlpool-WPW10491331-Dishwasher-Lower-Spray-Arm.jpg",
+    "price": "$44.23",
+    "doc_path": "data/docs/PS11755592.txt"
+  },
+  {
+    "part_number": "PS11755736",
+    "manufacturer_part_number": "WPW10503548",
+    "name": "Dishwasher Retainer Clip WPW10503548",
+    "appliance_type": "Dishwasher",
+    "symptoms": [],
+    "source_url": "https://www.partselect.com/PS11755736-Whirlpool-WPW10503548-Dishwasher-Retainer-Clip.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11755736-1-M-Whirlpool-WPW10503548-Dishwasher-Retainer-Clip.jpg",
+    "price": "$22.52",
+    "doc_path": "data/docs/PS11755736.txt"
+  },
+  {
+    "part_number": "PS11756150",
+    "manufacturer_part_number": "WPW10546503",
+    "name": "Dishwasher Upper Rack Adjuster WPW10546503",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Door won’t close",
+      "Door latch failure",
+      "Not cleaning dishes properly",
+      "Leaking",
+      "Will Not Start",
+      "Noisy"
+    ],
+    "source_url": "https://www.partselect.com/PS11756150-Whirlpool-WPW10546503-Dishwasher-Upper-Rack-Adjuster.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11756150-1-M-Whirlpool-WPW10546503-Dishwasher-Upper-Rack-Adjuster.jpg",
+    "price": "$33.69",
+    "doc_path": "data/docs/PS11756150.txt"
+  },
+  {
+    "part_number": "PS11756967",
+    "manufacturer_part_number": "WPW10653840",
+    "name": "Door Latch - Black WPW10653840",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Door latch failure",
+      "Door won’t close",
+      "Will Not Start",
+      "Leaking",
+      "Not cleaning dishes properly"
+    ],
+    "source_url": "https://www.partselect.com/PS11756967-Whirlpool-WPW10653840-Door-Latch-Black.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11756967-1-M-Whirlpool-WPW10653840-Door-Latch-Black.jpg",
+    "price": "$28.42",
+    "doc_path": "data/docs/PS11756967.txt"
+  },
+  {
+    "part_number": "PS11757021",
+    "manufacturer_part_number": "WPW10661886",
+    "name": "Refrigerator Screw WPW10661886",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Door won’t open or close"
+    ],
+    "source_url": "https://www.partselect.com/PS11757021-Whirlpool-WPW10661886-Refrigerator-Screw.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11757021-1-M-Whirlpool-WPW10661886-Refrigerator-Screw.jpg",
+    "price": "$11.77",
+    "doc_path": "data/docs/PS11757021.txt"
+  },
+  {
+    "part_number": "PS11757044",
+    "manufacturer_part_number": "WPW10670845",
+    "name": "Refrigerator Ice Bucket WPW10670845",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Leaking",
+      "Ice maker won’t dispense ice",
+      "Ice maker not making ice"
+    ],
+    "source_url": "https://www.partselect.com/PS11757044-Whirlpool-WPW10670845-Refrigerator-Ice-Bucket.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11757044-1-M-Whirlpool-WPW10670845-Refrigerator-Ice-Bucket.jpg",
+    "price": "$97.14",
+    "doc_path": "data/docs/PS11757044.txt"
+  },
+  {
+    "part_number": "PS11759673",
+    "manufacturer_part_number": "W10872845",
+    "name": "Dishwasher Filter W10872845",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Not cleaning dishes properly",
+      "Not draining",
+      "Not drying dishes properly",
+      "Leaking"
+    ],
+    "source_url": "https://www.partselect.com/PS11759673-Whirlpool-W10872845-Dishwasher-Filter.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11759673-1-M-Whirlpool-W10872845-Dishwasher-Filter.jpg",
+    "price": "$48.45",
+    "doc_path": "data/docs/PS11759673.txt"
+  },
+  {
+    "part_number": "PS11773089",
+    "manufacturer_part_number": "W11032770",
+    "name": "Motor Pump W11032770",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Not cleaning dishes properly",
+      "Will Not Start",
+      "Leaking",
+      "Will not fill with water",
+      "Noisy"
+    ],
+    "source_url": "https://www.partselect.com/PS11773089-Whirlpool-W11032770-Motor-Pump.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/11773089-1-M-Whirlpool-W11032770-Motor-Pump.jpg",
+    "price": "$158.73",
+    "doc_path": "data/docs/PS11773089.txt"
+  },
+  {
+    "part_number": "PS12347929",
+    "manufacturer_part_number": "W11162443",
+    "name": "Crisper Drawer W11162443",
+    "appliance_type": "Refrigerator",
+    "symptoms": [],
+    "source_url": "https://www.partselect.com/PS12347929-Whirlpool-W11162443-Crisper-Drawer.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/12347929-1-M-Whirlpool-W11162443-Crisper-Drawer.jpg",
+    "price": "$111.56",
+    "doc_path": "data/docs/PS12347929.txt"
+  },
+  {
+    "part_number": "PS12348515",
+    "manufacturer_part_number": "W11177741",
+    "name": "Dishwasher Door Seal W11177741",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Leaking"
+    ],
+    "source_url": "https://www.partselect.com/PS12348515-Whirlpool-W11177741-Dishwasher-Door-Seal.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/12348515-1-M-Whirlpool-W11177741-Dishwasher-Door-Seal.jpg",
+    "price": "$57.38",
+    "doc_path": "data/docs/PS12348515.txt"
+  },
+  {
+    "part_number": "PS12578165",
+    "manufacturer_part_number": "W11175771",
+    "name": "Dishwasher INLET VALVE W11175771",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Will not fill with water",
+      "Leaking",
+      "Not cleaning dishes properly",
+      "Noisy"
+    ],
+    "source_url": "https://www.partselect.com/PS12578165-Whirlpool-W11175771-Dishwasher-INLET-VALVE.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/12578165-1-M-Whirlpool-W11175771-Dishwasher-INLET-VALVE.jpg",
+    "price": "$54.24",
+    "doc_path": "data/docs/PS12578165.txt"
+  },
+  {
+    "part_number": "PS12578777",
+    "manufacturer_part_number": "W11239961",
+    "name": "Door Shelf Bin W11239961",
+    "appliance_type": "Refrigerator",
+    "symptoms": [],
+    "source_url": "https://www.partselect.com/PS12578777-Whirlpool-W11239961-Door-Shelf-Bin.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/12578777-1-M-Whirlpool-W11239961-Door-Shelf-Bin.jpg",
+    "price": "$120.54",
+    "doc_path": "data/docs/PS12578777.txt"
+  },
+  {
+    "part_number": "PS12584376",
+    "manufacturer_part_number": "W11259785",
+    "name": "Dishwasher Dish Rack Slide Track - Left Side W11259785",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Door won’t close",
+      "Door latch failure",
+      "Noisy"
+    ],
+    "source_url": "https://www.partselect.com/PS12584376-Whirlpool-W11259785-Dishwasher-Dish-Rack-Slide-Track-Left-Side.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/12584376-1-M-Whirlpool-W11259785-Dishwasher-Dish-Rack-Slide-Track-Left-Side.jpg",
+    "price": "$61.55",
+    "doc_path": "data/docs/PS12584376.txt"
+  },
+  {
+    "part_number": "PS12584377",
+    "manufacturer_part_number": "W11259786",
+    "name": "Dishwasher Dish Rack Slide Track - Right Side W11259786",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Door won’t close",
+      "Door latch failure"
+    ],
+    "source_url": "https://www.partselect.com/PS12584377-Whirlpool-W11259786-Dishwasher-Dish-Rack-Slide-Track-Right-Side.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/12584377-1-M-Whirlpool-W11259786-Dishwasher-Dish-Rack-Slide-Track-Right-Side.jpg",
+    "price": "$59.47",
+    "doc_path": "data/docs/PS12584377.txt"
+  },
+  {
+    "part_number": "PS12584610",
+    "manufacturer_part_number": "W11284458",
+    "name": "ICEMAKER W11284458",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Ice maker not making ice"
+    ],
+    "source_url": "https://www.partselect.com/PS12584610-Whirlpool-W11284458-ICEMAKER.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/12584610-1-M-Whirlpool-W11284458-ICEMAKER.jpg",
+    "price": "$105.35",
+    "doc_path": "data/docs/PS12584610.txt"
+  },
+  {
+    "part_number": "PS12728638",
+    "manufacturer_part_number": "W11384469",
+    "name": "Refrigerator Door Switch W11384469",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Light not working"
+    ],
+    "source_url": "https://www.partselect.com/PS12728638-Whirlpool-W11384469-Refrigerator-Door-Switch.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/12728638-1-M-Whirlpool-W11384469-Refrigerator-Door-Switch.jpg",
+    "price": "$30.53",
+    "doc_path": "data/docs/PS12728638.txt"
+  },
+  {
+    "part_number": "PS12731166",
+    "manufacturer_part_number": "W11396033",
+    "name": "Door Switch W11396033",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Light not working",
+      "Ice maker not making ice",
+      "Not dispensing water",
+      "Ice maker won’t dispense ice"
+    ],
+    "source_url": "https://www.partselect.com/PS12731166-Whirlpool-W11396033-Door-Switch.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/12731166-1-M-Whirlpool-W11396033-Door-Switch.jpg",
+    "price": "$30.53",
+    "doc_path": "data/docs/PS12731166.txt"
+  },
+  {
+    "part_number": "PS16217969",
+    "manufacturer_part_number": "W11449482",
+    "name": "Electric Control Board W11449482",
+    "appliance_type": "Refrigerator",
+    "symptoms": [],
+    "source_url": "https://www.partselect.com/PS16217969-Whirlpool-W11449482-Electric-Control-Board.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/16217969-1-M-Whirlpool-W11449482-Electric-Control-Board.jpg",
+    "price": "$186.37",
+    "doc_path": "data/docs/PS16217969.txt"
+  },
+  {
+    "part_number": "PS3406971",
+    "manufacturer_part_number": "W10195416",
+    "name": "Lower Dishrack Wheel W10195416",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Not cleaning dishes properly",
+      "Door won’t close",
+      "Noisy",
+      "Door latch failure",
+      "Leaking",
+      "Will Not Start"
+    ],
+    "source_url": "https://www.partselect.com/PS3406971-Whirlpool-W10195416-Lower-Dishrack-Wheel.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/3406971-1-M-Whirlpool-W10195416-Lower-Dishrack-Wheel.jpg",
+    "price": "$33.69",
+    "doc_path": "data/docs/PS3406971.txt"
+  },
+  {
+    "part_number": "PS372186",
+    "manufacturer_part_number": "4388736",
+    "name": "Refrigerator Ice Bin Auger Drum 4388736",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Ice maker won’t dispense ice",
+      "Ice maker not making ice",
+      "Ice maker dispenses too little ice"
+    ],
+    "source_url": "https://www.partselect.com/PS372186-Whirlpool-4388736-Refrigerator-Ice-Bin-Auger-Drum.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/372186-1-M-Whirlpool-4388736-Refrigerator-Ice-Bin-Auger-Drum.jpg",
+    "price": "$53.20",
+    "doc_path": "data/docs/PS372186.txt"
+  },
+  {
+    "part_number": "PS385132",
+    "manufacturer_part_number": "72017",
+    "name": "Touch-Up Paint - White 72017",
+    "appliance_type": "Dishwasher",
+    "symptoms": [],
+    "source_url": "https://www.partselect.com/PS385132-Whirlpool-72017-Touch-Up-Paint-White.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/385132-1-M-Whirlpool-72017-Touch-Up-Paint-White.jpg",
+    "price": "$11.77",
+    "doc_path": "data/docs/PS385132.txt"
+  },
+  {
+    "part_number": "PS429725",
+    "manufacturer_part_number": "240323002",
+    "name": "Bottom Door Bin 240323002",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Noisy",
+      "Touchpad does not respond",
+      "Ice maker not making ice",
+      "Door won’t open or close",
+      "Leaking"
+    ],
+    "source_url": "https://www.partselect.com/PS429725-Whirlpool-2255709-Refrigerator-Door-Shelf-Bin.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/429725-1-M-Frigidaire-240323002-Bottom-Door-Bin.jpg",
+    "price": "$59.47",
+    "doc_path": "data/docs/PS429725.txt"
+  },
+  {
+    "part_number": "PS733947",
+    "manufacturer_part_number": "8201515",
+    "name": "Icemaker Motor Kit 8201515",
+    "appliance_type": "Refrigerator",
+    "symptoms": [
+      "Ice maker not making ice",
+      "Ice maker won’t dispense ice"
+    ],
+    "source_url": "https://www.partselect.com/PS733947-Whirlpool-WP2188656-Refrigerator-Crisper-Drawer-with-Humidity-Control.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/733947-1-M-Whirlpool-8201515-Icemaker-Motor-Kit.jpg",
+    "price": "$98.81",
+    "doc_path": "data/docs/PS733947.txt"
+  },
+  {
+    "part_number": "PS9494999",
+    "manufacturer_part_number": "W10703867",
+    "name": "Dishwasher Heating Element W10703867",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Not drying dishes properly",
+      "Not cleaning dishes properly",
+      "Leaking"
+    ],
+    "source_url": "https://www.partselect.com/PS9494999-Whirlpool-W10703867-Dishwasher-Heating-Element.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/9494999-1-M-Whirlpool-W10703867-Dishwasher-Heating-Element.jpg",
+    "price": "$79.80",
+    "doc_path": "data/docs/PS9494999.txt"
+  },
+  {
+    "part_number": "PS972325",
+    "manufacturer_part_number": "8194001",
+    "name": "Door Balance Link Kit 8194001",
+    "appliance_type": "Dishwasher",
+    "symptoms": [
+      "Door latch failure",
+      "Door won’t close",
+      "Noisy",
+      "Leaking",
+      "Will Not Start"
+    ],
+    "source_url": "https://www.partselect.com/PS972325-Whirlpool-8194001-Door-Balance-Link-Kit.htm",
+    "image_url": "https://partselectcom-gtcdcddbene3cpes.z01.azurefd.net/972325-1-M-Whirlpool-8194001-Door-Balance-Link-Kit.jpg",
+    "price": "$29.47",
+    "doc_path": "data/docs/PS972325.txt"
+  }
+]

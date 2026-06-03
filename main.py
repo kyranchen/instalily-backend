@@ -24,6 +24,7 @@ load_dotenv(Path(__file__).parent / ".env", override=True)
 from agent.context import SessionStore   # noqa: E402  (must come after load_dotenv)
 from agent.loop import run_turn          # noqa: E402
 from agent.store import PartStore        # noqa: E402
+from rag.retrieve import Retriever       # noqa: E402
 
 app = FastAPI(title="PartSelect Agent")
 
@@ -35,6 +36,7 @@ app.add_middleware(
 )
 
 PART_STORE = PartStore()
+RETRIEVER = Retriever()
 SESSIONS = SessionStore()
 
 
@@ -65,7 +67,7 @@ def healthz() -> dict[str, Any]:
 @app.post("/chat", response_model=ChatResponse)
 def chat(req: ChatRequest) -> ChatResponse:
     session = SESSIONS.get_or_create(req.session_id)
-    turn = run_turn(PART_STORE, session, req.message)
+    turn = run_turn(PART_STORE, RETRIEVER, session, req.message)
 
     # Build product cards for any parts the agent successfully looked up this turn
     cards: list[PartCard] = []

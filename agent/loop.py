@@ -23,6 +23,8 @@ from typing import Any
 
 from anthropic import Anthropic
 
+from rag.retrieve import Retriever
+
 from .context import Session, extract_entities
 from .guardrails import (
     SAFE_FALLBACK_REPLY,
@@ -77,7 +79,12 @@ def _update_entities_from_tool_input(session: Session, tool_input: dict[str, Any
             session.current_model = str(mn).upper().strip()
 
 
-def run_turn(store: PartStore, session: Session, user_message: str) -> TurnResult:
+def run_turn(
+    store: PartStore,
+    retriever: Retriever,
+    session: Session,
+    user_message: str,
+) -> TurnResult:
     client = _client()
     _update_entities_from_text(session, user_message)
     session.add_user(user_message)
@@ -142,12 +149,17 @@ def run_turn(store: PartStore, session: Session, user_message: str) -> TurnResul
                 continue
             tool_input = dict(block.input)
             _update_entities_from_tool_input(session, tool_input)
-            result_json = run_tool(store, block.name, tool_input)
+            result_json = run_tool(store, retriever, block.name, tool_input)
             tool_calls.append({"name": block.name, "input": tool_input, "result": result_json})
             try:
                 parsed = json.loads(result_json)
+                # get_part_details: top-level part_number when found
                 if parsed.get("found") and parsed.get("part_number"):
                     parts_referenced.append(parsed["part_number"])
+                # search_parts: each result has a part_number
+                for r in parsed.get("results", []) or []:
+                    if r.get("part_number"):
+                        parts_referenced.append(r["part_number"])
             except json.JSONDecodeError:
                 pass
             tool_results_block.append(

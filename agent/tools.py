@@ -13,10 +13,13 @@ the stage-3 guardrails) can reason about absence honestly.
 from __future__ import annotations
 
 import json
-from typing import Any
+from typing import Any, Optional, TYPE_CHECKING
 
 from .context import DISHWASHER_PREFIXES, REFRIGERATOR_PREFIXES
 from .store import PartStore
+
+if TYPE_CHECKING:
+    from rag.retrieve import Retriever
 
 # ---------------------------------------------------------------------------
 # Tool schemas — match Anthropic's tool-use input_schema format
@@ -67,6 +70,64 @@ TOOL_SCHEMAS: list[dict[str, Any]] = [
                 },
             },
             "required": ["part_number", "model_number"],
+        },
+    },
+    {
+        "name": "search_parts",
+        "description": (
+            "Semantic search across the catalog for parts that match a free-text "
+            "description of a problem, symptom, or component (e.g. 'ice maker "
+            "making noise', 'dishwasher upper rack falling', 'door bin broken'). "
+            "Use this when the user describes a symptom WITHOUT a specific part "
+            "number. Returns up to 3 candidate parts ranked by relevance, each "
+            "with the same fields as get_part_details. Returns an empty list "
+            "when no part is sufficiently relevant — do NOT fabricate a result "
+            "from an empty response."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string",
+                    "description": "Free-text description of the symptom or component the user needs",
+                },
+                "appliance_type": {
+                    "type": "string",
+                    "enum": ["Refrigerator", "Dishwasher"],
+                    "description": (
+                        "Optional filter to restrict results to one appliance "
+                        "type. Use this whenever the user has clearly indicated "
+                        "their appliance type to keep results on-topic."
+                    ),
+                },
+            },
+            "required": ["query"],
+        },
+    },
+    {
+        "name": "get_repair_guide",
+        "description": (
+            "Retrieve relevant prose snippets from the catalog for a given "
+            "symptom or repair question (e.g. 'how to replace a dishwasher "
+            "drain pump'). Returns up to 3 text excerpts plus the part numbers "
+            "they came from. Use this for diagnostic or how-to questions where "
+            "the user needs explanation, not just a product card. Ground your "
+            "repair advice in these snippets — do not invent steps."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "symptom": {
+                    "type": "string",
+                    "description": "What the user is trying to diagnose or repair, in plain language",
+                },
+                "appliance_type": {
+                    "type": "string",
+                    "enum": ["Refrigerator", "Dishwasher"],
+                    "description": "Optional filter for appliance category",
+                },
+            },
+            "required": ["symptom"],
         },
     },
 ]
@@ -186,13 +247,71 @@ def check_compatibility(
 
 
 # ---------------------------------------------------------------------------
+# RAG-backed tools
+# ---------------------------------------------------------------------------
+
+def search_parts(
+    store: PartStore,
+    retriever: "Retriever",
+    query: str,
+    appliance_type: Optional[str] = None,
+) -> dict[str, Any]:
+    hits = retriever.search(query, appliance_type=appliance_type)
+    results: list[dict[str, Any]] = []
+    for h in hits:
+        part = store.get(h.meta["part_number"])
+        if not part:
+            continue
+        slim = _slim_part(part)
+        slim["relevance_score"] = round(h.score, 3)
+        results.append(slim)
+    return {
+        "query": query,
+        "appliance_filter": appliance_type,
+        "result_count": len(results),
+        "results": results,
+    }
+
+
+def get_repair_guide(
+    retriever: "Retriever",
+    symptom: str,
+    appliance_type: Optional[str] = None,
+) -> dict[str, Any]:
+    hits = retriever.search(symptom, appliance_type=appliance_type)
+    snippets: list[dict[str, Any]] = []
+    for h in hits:
+        snippets.append(
+            {
+                "part_number": h.meta["part_number"],
+                "name": h.meta["name"],
+                "appliance_type": h.meta["appliance_type"],
+                "source_url": h.meta.get("source_url"),
+                "relevance_score": round(h.score, 3),
+                "snippet": h.snippet,
+            }
+        )
+    return {
+        "symptom": symptom,
+        "appliance_filter": appliance_type,
+        "snippet_count": len(snippets),
+        "snippets": snippets,
+    }
+
+
+# ---------------------------------------------------------------------------
 # Dispatcher used by the agent loop
 # ---------------------------------------------------------------------------
 
 TOOL_NAMES = {schema["name"] for schema in TOOL_SCHEMAS}
 
 
-def run_tool(store: PartStore, name: str, arguments: dict[str, Any]) -> str:
+def run_tool(
+    store: PartStore,
+    retriever: "Retriever",
+    name: str,
+    arguments: dict[str, Any],
+) -> str:
     """Run a tool by name; always returns a JSON string for the agent to consume."""
     if name == "get_part_details":
         result = get_part_details(store, arguments["part_number"])
@@ -201,6 +320,19 @@ def run_tool(store: PartStore, name: str, arguments: dict[str, Any]) -> str:
             store,
             arguments["part_number"],
             arguments["model_number"],
+        )
+    elif name == "search_parts":
+        result = search_parts(
+            store,
+            retriever,
+            arguments["query"],
+            arguments.get("appliance_type"),
+        )
+    elif name == "get_repair_guide":
+        result = get_repair_guide(
+            retriever,
+            arguments["symptom"],
+            arguments.get("appliance_type"),
         )
     else:
         result = {"error": f"Unknown tool: {name}"}
