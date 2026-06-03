@@ -7,7 +7,8 @@ details, compatibility, and search. Three reliability layers wrap the agent so
 it stays accurate, in-scope, and honest about what it does and doesn't know.
 
 Backend is FastAPI (Python) exposing `POST /chat`. The companion
-[Create React App frontend](../instalily-case-study) calls it.
+[Create React App frontend](https://github.com/kyranchen/instalily-case-study)
+calls it.
 
 ---
 
