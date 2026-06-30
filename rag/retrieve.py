@@ -34,7 +34,6 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 VECTORS_PATH = DATA / "vectors.npy"
 META_PATH = DATA / "vectors_meta.json"
-DOCS_DIR = DATA / "docs"
 
 MODEL_NAME = "all-MiniLM-L6-v2"
 DEFAULT_THRESHOLD = 0.25
@@ -108,17 +107,8 @@ class Retriever:
             if score < threshold:
                 break
             meta = self._meta[idx]
-            snippet = _read_snippet(meta.get("doc_path", ""))
+            # Snippet is baked into the index at embed time, so retrieval needs
+            # no doc file at request time (data/docs/ is a pure embed input).
+            snippet = meta.get("snippet", "")
             hits.append(Hit(score=float(score), meta=meta, snippet=snippet))
         return hits
-
-
-def _read_snippet(doc_path_rel: str, max_chars: int = 800) -> str:
-    """Return a short excerpt from a doc file (used by get_repair_guide)."""
-    if not doc_path_rel:
-        return ""
-    p = ROOT / doc_path_rel
-    if not p.exists():
-        return ""
-    text = p.read_text(encoding="utf-8")
-    return text[:max_chars] + ("..." if len(text) > max_chars else "")

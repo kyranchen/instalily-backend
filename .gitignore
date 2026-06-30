@@ -4,3 +4,10 @@ __pycache__/
 venv/
 .env
 .DS_Store
+.claude/
+data/docs
+
+# personal presentation prep — not part of the deliverable
+design-notes.md
+loom-runbook.md
+PartSelect-Agent.pptx

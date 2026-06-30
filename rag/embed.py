@@ -29,6 +29,7 @@ VECTORS = DATA / "vectors.npy"
 META = DATA / "vectors_meta.json"
 
 MODEL_NAME = "all-MiniLM-L6-v2"
+SNIPPET_CHARS = 800  # excerpt length stored in the index for get_repair_guide
 
 
 def main() -> None:
@@ -67,6 +68,9 @@ def main() -> None:
                 "image_url": part.get("image_url"),
                 "price": part.get("price"),
                 "doc_path": str(path.relative_to(ROOT)),
+                # Bake the snippet into the index so retrieval needs no doc file
+                # at request time — data/docs/ is then a pure embedding input.
+                "snippet": text[:SNIPPET_CHARS] + ("..." if len(text) > SNIPPET_CHARS else ""),
             }
         )
 

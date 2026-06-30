@@ -208,6 +208,34 @@ def test_12_nonexistent_part_honest() -> None:
 
 
 # ---------------------------------------------------------------------------
+# Installation route (named part → get_install_guide)
+# ---------------------------------------------------------------------------
+
+def test_13_install_named_part() -> None:
+    """How-to install for a NAMED part → get_install_guide (not get_part_details)."""
+    r = run_case(["How do I install part PS11752778?"])
+    names = tool_names_called(r)
+    assert "get_install_guide" in names, _debug(r)
+    # It should look up the part the user named
+    gi_inputs = tool_inputs_for(r, "get_install_guide")
+    assert any("PS11752778" in (i.get("part_number") or "").upper() for i in gi_inputs), _debug(r)
+
+
+def test_14_install_via_entity_memory() -> None:
+    """“how do I install it?” after naming a part resolves via entity memory."""
+    r = run_case(
+        [
+            "Tell me about PS11753379",
+            "How do I install it?",
+        ]
+    )
+    final_names = [c["name"] for c in r.turns[-1].tool_calls]
+    assert "get_install_guide" in final_names, _debug(r)
+    gi_inputs = [c["input"] for c in r.turns[-1].tool_calls if c["name"] == "get_install_guide"]
+    assert any("PS11753379" in (i.get("part_number") or "").upper() for i in gi_inputs), _debug(r)
+
+
+# ---------------------------------------------------------------------------
 # Helper
 # ---------------------------------------------------------------------------
 

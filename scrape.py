@@ -66,10 +66,11 @@ class Part:
     replaces_part_numbers: list[str] = field(default_factory=list)
     sample_models: list[str] = field(default_factory=list)   # subset of cross-ref (capped)
     install_difficulty: str | None = None
+    install_time: str | None = None       # e.g. "Less than 15 mins" (most common across stories)
     install_video_id: str | None = None
     image_url: str | None = None
     source_url: str = ""
-    repair_stories: list[str] = field(default_factory=list)  # short user-submitted notes
+    repair_stories: list[str] = field(default_factory=list)  # clean DIY instruction text
 
 
 def fetch(url: str) -> str:
@@ -234,12 +235,31 @@ def parse_part(html: str, source_url: str) -> Part | None:
     image_el = soup.select_one("img[itemprop=image]")
     image_url = image_el.get("src") if image_el else None
 
-    # Repair stories (capped)
+    # Repair / installation stories — capture just the instruction text (the
+    # "how I did it" narrative), dropping the "Other Parts Used" tail and the
+    # author/difficulty footer. These double as customer installation notes.
     repair_stories: list[str] = []
-    for rs in soup.select(".repair-story")[:3]:
-        txt = _clean(rs.get_text(" ", strip=True))
-        if 30 < len(txt) < 600:
-            repair_stories.append(txt)
+    install_times: list[str] = []
+    for rs in soup.select(".repair-story")[:5]:
+        instr_el = rs.select_one(".repair-story__instruction")
+        if instr_el:
+            txt = _clean(instr_el.get_text(" ", strip=True))
+            txt = re.split(r"Other Parts Used:", txt)[0].strip()
+            if 20 < len(txt) < 700:
+                repair_stories.append(txt)
+        # Per-story "Total Repair Time: <value>" — e.g. "Less than 15 mins",
+        # "15 - 30 mins", "1- 2 hours", "More than 2 hours".
+        story_text = _clean(rs.get_text(" ", strip=True))
+        tm = re.search(
+            r"Total Repair Time:?\s*((?:Less than|More than)?\s*\d[\d\s\-]*(?:mins?|minutes?|hours?|hrs?))",
+            story_text, re.I)
+        if tm:
+            install_times.append(_clean(tm.group(1)))
+
+    # Part-level estimated time = most common across stories
+    install_time = None
+    if install_times:
+        install_time = max(set(install_times), key=install_times.count)
 
     appliance_type = _appliance_type_from_name(name, products_text)
 
@@ -257,6 +277,7 @@ def parse_part(html: str, source_url: str) -> Part | None:
         replaces_part_numbers=replaces,
         sample_models=sample_models,
         install_difficulty=install_difficulty,
+        install_time=install_time,
         install_video_id=install_video_id,
         image_url=image_url,
         source_url=BASE + source_url if source_url.startswith("/") else source_url,
@@ -282,6 +303,8 @@ def part_to_doc(p: Part) -> str:
         lines.append(f"Price: {p.price}")
     if p.install_difficulty:
         lines.append(f"Installation Difficulty: {p.install_difficulty}")
+    if p.install_time:
+        lines.append(f"Estimated Installation Time: {p.install_time}")
     lines.append("")
     if p.description:
         lines.append("## Description")
@@ -301,7 +324,7 @@ def part_to_doc(p: Part) -> str:
         lines.append(", ".join(p.sample_models))
         lines.append("")
     if p.repair_stories:
-        lines.append("## Customer Repair Stories")
+        lines.append("## Customer Installation & Repair Notes")
         for r in p.repair_stories:
             lines.append(f"- {r}")
     return "\n".join(lines)

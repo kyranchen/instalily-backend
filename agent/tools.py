@@ -105,6 +105,30 @@ TOOL_SCHEMAS: list[dict[str, Any]] = [
         },
     },
     {
+        "name": "get_install_guide",
+        "description": (
+            "Get installation help for a SPECIFIC part the user has named by its "
+            "PartSelect number (e.g. PS11752778) or manufacturer part number. Use "
+            "this when the user asks how to install or replace a part they've "
+            "identified — e.g. 'how do I install PS11752778?' or 'how do I replace "
+            "this part?'. Returns install difficulty, estimated time, the "
+            "installation video, and real customer installation notes. Ground any "
+            "steps you give in the returned `installation_notes` — these are "
+            "customer-submitted, so present them as such and do NOT invent steps. "
+            "If the part isn't found, say so honestly."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "part_number": {
+                    "type": "string",
+                    "description": "PartSelect number (PS prefix) or manufacturer part number",
+                }
+            },
+            "required": ["part_number"],
+        },
+    },
+    {
         "name": "get_repair_guide",
         "description": (
             "Retrieve relevant prose snippets from the catalog for a given "
@@ -178,6 +202,31 @@ def get_part_details(store: PartStore, part_number: str) -> dict[str, Any]:
     if not part:
         return {"found": False, "part_number": part_number.upper().strip()}
     return _slim_part(part)
+
+
+def get_install_guide(store: PartStore, part_number: str) -> dict[str, Any]:
+    """Installation help for a known part: difficulty, time, video, customer notes."""
+    part = store.get(part_number)
+    if not part:
+        return {"found": False, "part_number": part_number.upper().strip()}
+    video_id = part.get("install_video_id")
+    return {
+        "found": True,
+        "part_number": part["part_number"],
+        "name": part["name"],
+        "appliance_type": part["appliance_type"],
+        "install_difficulty": part.get("install_difficulty"),
+        "estimated_time": part.get("install_time"),
+        "install_video_youtube_id": video_id,
+        "install_video_url": (
+            f"https://www.youtube.com/watch?v={video_id}" if video_id else None
+        ),
+        # Customer-submitted DIY narratives — the closest thing to step text we have.
+        "installation_notes": part.get("repair_stories", [])[:3],
+        "description": part.get("description"),
+        "image_url": part.get("image_url"),
+        "source_url": part.get("source_url"),
+    }
 
 
 def check_compatibility(
@@ -315,6 +364,8 @@ def run_tool(
     """Run a tool by name; always returns a JSON string for the agent to consume."""
     if name == "get_part_details":
         result = get_part_details(store, arguments["part_number"])
+    elif name == "get_install_guide":
+        result = get_install_guide(store, arguments["part_number"])
     elif name == "check_compatibility":
         result = check_compatibility(
             store,
